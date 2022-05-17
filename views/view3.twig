@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8"> 
+    <title>Ciclo for en Twig</title>
+ </head>
+ <body>
+    <h1>For</h1>
+    <ul>
+        {% for person in people %}
+        <li>{{ person }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Secuencia de numeros</h2>
+    <ul>
+        {% for i in 0..10 %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Secuencia del abecedario | con filtros</h2>
+    <ul>
+        {% for i in 'a'|upper..'z'|upper %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+
+ </body>
+ </html>
