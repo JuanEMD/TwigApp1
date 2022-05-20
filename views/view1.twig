@@ -1,15 +1,7 @@
- 
- {% set name = 'Juan' %}
+{% extends 'layouts/layout1.twig' %}
 
+ {# {% set name = 'Juan' %} #}
  
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8"> 
-    <title>Mi pagina con Twig</title>
- </head>
- <body>
-
     {# Imprimiendo variables locales y externas #}
 
     {# <h1>{{ name }}, {{ saludo }}<h1> #}
@@ -20,6 +12,13 @@
     <p>Hola, mi nombre es {{ user.name }}, tengo {{ user.age }} y trabajo en {{ user['company-name'] }} </p> #}
 
     {# Filtros y bloques #}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+    
+{% block content %}
+{{ parent() }}
 
     <h1>Datos de usuario</h1>
     <p>
@@ -42,10 +41,13 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         {% endapply %}
     </p>
-
+{# 
     <code>
         {{ user|json_encode }}
-    </code>
+    </code> #}
 
- </body>
- </html>
+    {% endblock %}
+{# 
+    {% block footer %}
+    {{ parent() }}
+    {% endblock %} #}

@@ -5,23 +5,21 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="output.css" rel="stylesheet">
+        <link href="./styles/layout1.css" rel="stylesheet">
         <title>Layout</title>
     {% endblock %}
 </head>
 <body>
-    <div id="content">
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+    {{ include('components/navbar.twig') }}
 
+    <div class="content">
         {% block content %}
-        
+
         {% endblock %}
     </div>
-    <div id="footer">
+    <div class="footer">
         {% block footer %}
-        
+            {{ include('components/footer.twig') }}
         {% endblock %}
     </div>
 </body>
