@@ -1,0 +1,26 @@
+{% extends './layouts/layout1.twig' %}
+
+    {% block content %}
+    {{ parent()}}
+    
+    <h1>Condicionales con Twig</h1>
+
+    {# Revisando que un array no esta vacio #}
+    {% if user %}
+        Hola, {{ user.lastname|title }}
+    {% endif %}
+    
+    {% if(online == true) %}
+        <p>Online</p>
+    {% else %}
+        <p>Offline</p>
+    {% endif %}
+
+    {# Revisar que un elemento esta definido #}
+    {% if user is defined %}
+        <p> El objeto user esta definido </p>
+    {% else %}
+        <p>El objeto user no esta definido</p>
+    {% endif %}
+
+    {% endblock %}

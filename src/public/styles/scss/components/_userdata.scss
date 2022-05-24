@@ -1,0 +1,50 @@
+@use "../abstracts";
+
+.data-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+
+  .data-container {
+    .data-show {
+      width: 400px;
+      // border: 1px solid black;
+      // border-radius: 5px;
+      // padding: 5px;
+      margin-top: 10px;
+
+      ul {
+        padding: 0;
+        // width: 80%;
+      }
+
+      .data {
+        display: flex;
+        justify-content: space-between;
+        border: 0.1px solid black;
+        border-radius: 5px;
+        padding: 8px;
+        margin: 5px 0px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .action-buttons {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        font-size: 35px;
+        padding: 0px 8px;
+        color: gray;
+      }
+    }
+
+    .add-button {
+      @include abstracts.buttonMixin1;
+    }
+  }
+}

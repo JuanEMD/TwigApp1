@@ -1,0 +1,31 @@
+<div class="data-wrapper">
+  <div class="data-container">
+    <a href="../pages/addUser.php">
+      <button type="button" class="add-button">Agregar usuario</button>
+    </a>
+
+    <div class="data-show">
+      {#
+      <ul>
+        #} {% for registro in registros %}
+
+        <div class="data">
+          <p>
+            {{ registro.id }} - {{ registro.nombre }} {{ registro.apellido }}
+          </p>
+          <div class="action-buttons">
+            <a href="../controllers/edit_task.php?id={{ registro.id }}"
+              ><i class="fa-solid fa-square-pen"></i
+            ></a>
+            <a href="../controllers/delete_task.php?id={{ registro.id }}"
+              ><i class="fa-solid fa-square-minus"></i
+            ></a>
+          </div>
+        </div>
+
+        {% endfor %} {#
+      </ul>
+      #}
+    </div>
+  </div>
+</div>

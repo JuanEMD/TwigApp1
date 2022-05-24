@@ -1,0 +1,53 @@
+{% extends './layouts/layout1.twig' %}
+
+ {# {% set name = 'Juan' %} #}
+ 
+    {# Imprimiendo variables locales y externas #}
+
+    {# <h1>{{ name }}, {{ saludo }}<h1> #}
+
+    {# <h1>Hola {{ name }}</h1> #}
+
+    {# <h1>{{ attribute(user, 'company-name') }}</h1>
+    <p>Hola, mi nombre es {{ user.name }}, tengo {{ user.age }} y trabajo en {{ user['company-name'] }} </p> #}
+
+    {# Filtros y bloques #}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+    
+{% block content %}
+{{ parent() }}
+
+    <h1>Datos de usuario</h1>
+    <p>
+        Nombre: {{ user.name|upper|striptags }}
+    </p>
+    <p>
+        Apellido: {{ user.lastname|title }}
+    </p>
+    <p>
+        Edad: {{ user.age }}
+    </p>
+    <p>
+        Email: {{ user.email }}
+    </p>
+    <p>
+        Company: {{ user['company-name'] }}
+    </p>
+    <p>
+        {% apply title %}
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {% endapply %}
+    </p>
+{# 
+    <code>
+        {{ user|json_encode }}
+    </code> #}
+
+    {% endblock %}
+{# 
+    {% block footer %}
+    {{ parent() }}
+    {% endblock %} #}

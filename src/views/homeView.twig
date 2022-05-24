@@ -1,0 +1,7 @@
+{% extends './layouts/layout1.twig' %} {% block head %}
+{{ parent() }}
+{% endblock %} {% block content %}
+{{ parent() }}
+{{ include("./components/dataShow.twig") }}
+
+{% endblock %}

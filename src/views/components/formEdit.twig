@@ -1,0 +1,31 @@
+{# {% extends 'layouts/layout1.twig' %} #} {# {% block head %}
+{{ parent() }}
+{% endblock %} #} {#
+<link href="../public/styles/css/styles.css" rel="stylesheet" /> #} {# {% block
+content %} {{ parent() }} #}
+
+<div class="form-container">
+  <form
+    action="../controllers/edit_task.php?id={{id}}"
+    method="POST"
+  >
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Nombre..."
+      value="{{nombre}}"
+    />
+
+    <input
+      type="text"
+      name="apellido"
+      placeholder="Apellido..."
+      value="{{apellido}}"
+    />
+
+    <button type="submit" name="update_task" class="submit-button">
+      Actualizar
+    </button>
+  </form>
+</div>
+{# {% endblock %} {% block footer %} {% endblock %} #}

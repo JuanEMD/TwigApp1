@@ -1,0 +1,15 @@
+@mixin buttonMixin1(
+  $btnWidth: 100%,
+  $btnHeight: 30px,
+  $btnColor: white,
+  $btnBgColor: #3396ff,
+  $btnBorderRadius: 5px,
+  $btnBoder: none
+) {
+  width: $btnWidth;
+  height: $btnHeight;
+  color: $btnColor;
+  background-color: $btnBgColor;
+  border-radius: $btnBorderRadius;
+  border: $btnBoder;
+}
