@@ -12,12 +12,17 @@
     height: 100%;
   }
 
+  .navbar-left{
+    display: -webkit-box;
+    // justify-content: space-between;
+  }
+
   .navbar-logo {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     font-size: 30px;
-    padding: 0px 2%;
+    padding: 0px 5%;
 
     a {
       text-decoration: none;
@@ -36,7 +41,7 @@
       padding: 0;
     }
     a {
-      padding: 7px 30px;
+      padding: 7px 15px;
       border-radius: 20px;
       text-decoration: none;
       color: white;
@@ -52,10 +57,11 @@
     flex-wrap: wrap;
     align-content: center;
     font-size: 25px;
+    padding: 0 3%;
 
     p {
       margin: 0;
-      padding: 15px;
+      // padding: 15px;
     }
   }
 }

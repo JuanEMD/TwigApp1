@@ -1,20 +1,21 @@
-{# <link href="../public/styles/css/styles.css" rel="stylesheet" /> #} {% set
-username = username %}
+{# <link href="../public/styles/css/styles.css" rel="stylesheet" /> #}
 
 <div class="navbar-container">
   <div class="navbar-content">
-    <div class="navbar-logo">
-      <a href="../pages/homePage.php">TwigApp</a>
-    </div>
-    <div class="navbar-items">
-      <ul>
-        <a href="page1x.php">Datos de usuario</a>
-        <a href="page2x.php">Condicionales</a>
-        <a href="page3x.php">Ciclos</a>
-      </ul>
+    <div class="navbar-left">
+      <div class="navbar-logo">
+        <a href="../pages/homePage.php">TwigApp</a>
+      </div>
+      <div class="navbar-items">
+        <ul>
+          <a href="page1x.php">Datos de usuario</a>
+          <a href="page2x.php">Condicionales</a>
+          <a href="page3x.php">Ciclos</a>
+        </ul>
+      </div>
     </div>
     <div class="navbar-user-info">
-      <p>{{ users }}</p>
+      <p>{{ registros[8].nombre }}</p>
     </div>
   </div>
 </div>
